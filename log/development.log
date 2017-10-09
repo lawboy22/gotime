@@ -6062,3 +6062,2146 @@ Processing by PagesController#index as HTML
   Rendered layouts/_nav_users.html.erb (0.3ms)
   Rendered layouts/_nav.html.erb (2.4ms)
 Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-24 22:25:00 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 8]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (53.6ms)
+Completed 200 OK in 424ms (Views: 408.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 76.180.142.113 at 2017-09-24 22:25:03 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kXhkD2rBUkH4qp/YAgE7zwmPoBsFB7LxjoLr5n471krr6MxNG/HlT5Idnij8n9swnNm2qea4Hels6szEI4rGKQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://chirpy-lawboy22.c9users.io/
+Completed 302 Found in 31ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:04 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_nav_guest.html.erb (0.8ms)
+  Rendered layouts/_nav.html.erb (4.7ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 76.180.142.113 at 2017-09-24 22:25:06 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.3ms)
+  Rendered layouts/_nav_guest.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 76.180.142.113 at 2017-09-24 22:25:24 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YCn1RtAYTEYuV4ui/CG9EG7/g0IaKvJN/jqDhQDeSJVKOgz1OUPqztiE3k5HSYPONN1jPhZo7z9HVqXc0dwbHw==", "user"=>{"username"=>"nicks", "email"=>"nse@nse.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'nse@nse.com' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["username", "nicks"], ["email", "nse@nse.com"], ["encrypted_password", "$2a$11$46R2grkXJMfad24OF9h30ew.HgHy2DFGKCIVcgYoYxe4t6F1zQ89S"], ["created_at", "2017-09-24 22:25:24.529410"], ["updated_at", "2017-09-24 22:25:24.529410"]]
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-09-24 22:25:24.542080"], ["current_sign_in_at", "2017-09-24 22:25:24.542080"], ["last_sign_in_ip", "76.180.142.113"], ["current_sign_in_ip", "76.180.142.113"], ["sign_in_count", 1], ["updated_at", "2017-09-24 22:25:24.542884"], ["id", 9]]
+  [1m[35m (7.5ms)[0m  commit transaction
+Redirected to https://chirpy-lawboy22.c9users.io/
+Completed 302 Found in 218ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:24 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/profile" for 76.180.142.113 at 2017-09-24 22:25:30 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/profile"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.6ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:34 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 55ms (Views: 54.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-24 22:25:36 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 41ms (Views: 40.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-24 22:25:38 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-24 22:25:45 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nickss" for 76.180.142.113 at 2017-09-24 22:25:49 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nickss"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nickss"]]
+Redirected to https://chirpy-lawboy22.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:49 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user/nickss" for 76.180.142.113 at 2017-09-24 22:25:56 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nickss"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nickss"]]
+Redirected to https://chirpy-lawboy22.c9users.io/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-24 22:25:56 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ndawg" for 76.180.142.113 at 2017-09-24 22:26:03 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [GET] "/ndawg"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.7ms)
+
+
+Started GET "/user/ndawg" for 76.180.142.113 at 2017-09-24 22:26:10 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"ndawg"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "ndawg"]]
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/ndawg" for 76.180.142.113 at 2017-09-25 01:50:14 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"ndawg"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "ndawg"]]
+  Rendered pages/profile.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (15.7ms)
+Completed 200 OK in 650ms (Views: 524.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-25 01:50:18 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 88ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-25 01:50:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20170925015209)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "contect" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_posts_on_user_id" ON "posts" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170925015209"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_posts_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["contect", "post content"], ["user_id", 8], ["created_at", "2017-09-26 02:08:24.937362"], ["updated_at", "2017-09-26 02:08:24.937362"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-26 02:14:23 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.5ms)
+  Rendered layouts/_nav.html.erb (6.3ms)
+Completed 200 OK in 817ms (Views: 772.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-26 02:14:31 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 100ms (Views: 98.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-26 02:14:34 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["contect", "New Post!"], ["user_id", 5], ["created_at", "2017-09-27 01:45:48.753497"], ["updated_at", "2017-09-27 01:45:48.753497"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 01:51:06 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: </div>
+    16: </div>
+    17: </div>
+    18: <% for @p in @posts %>
+    19:     <div class="col-xs-6">
+    20:         <div class="panel panel-default">
+    21:   <div class="panel-body">
+  app/views/pages/profile.html.erb:18:in `_app_views_pages_profile_html_erb__184573542290143022_43489300'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.1ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-27 01:54:02 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (49.7ms)
+Completed 200 OK in 672ms (Views: 658.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 01:54:06 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: </div>
+    16: </div>
+    17: </div>
+    18: <% for @p in @posts %>
+    19:     <div class="col-xs-6">
+    20:         <div class="panel panel-default">
+    21:   <div class="panel-body">
+  app/views/pages/profile.html.erb:18:in `_app_views_pages_profile_html_erb__2219676198318130000_69955095613700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["contect", "New Post!"], ["user_id", 9], ["created_at", "2017-09-27 01:56:50.942713"], ["updated_at", "2017-09-27 01:56:50.942713"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 01:57:02 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: </div>
+    16: </div>
+    17: </div>
+    18: <% for @p in @posts %>
+    19:     <div class="col-xs-6">
+    20:         <div class="panel panel-default">
+    21:   <div class="panel-body">
+  app/views/pages/profile.html.erb:18:in `_app_views_pages_profile_html_erb__2219676198318130000_69955095613700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.9ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 01:57:08 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    15: </div>
+    16: </div>
+    17: </div>
+    18: <% for @p in @posts %>
+    19:     <div class="col-xs-6">
+    20:         <div class="panel panel-default">
+    21:   <div class="panel-body">
+  app/views/pages/profile.html.erb:18:in `_app_views_pages_profile_html_erb__2219676198318130000_69955095613700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.0ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-09-27 02:00:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.5ms)
+  Rendered layouts/_nav.html.erb (56.3ms)
+Completed 200 OK in 419ms (Views: 405.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 02:00:47 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    17: </div>
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <% for @p in @posts %>
+    21:         <div class="panel panel-default">
+    22:   <div class="panel-body">
+    23:         <p><%= @p.contect %></p>
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb__153177691333303428_70083541836940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 02:03:14 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (5.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (4.6ms)
+Completed 200 OK in 391ms (Views: 346.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 02:07:13 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (5.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (15.6ms)
+Completed 200 OK in 410ms (Views: 364.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:07:15 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:07:19 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 54ms (Views: 52.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:07:20 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:14 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.5ms)
+  Rendered layouts/_nav.html.erb (52.8ms)
+Completed 200 OK in 423ms (Views: 394.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:16 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 93ms (Views: 91.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:18 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:19 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-27 02:10:22 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/explore" for 76.180.142.113 at 2017-09-27 02:10:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/explore.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-27 02:14:04 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.6ms)
+  Rendered layouts/_nav.html.erb (4.7ms)
+Completed 200 OK in 387ms (Views: 343.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:18:55 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (5.2ms)
+Completed 200 OK in 618ms (Views: 560.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:19:02 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:19:05 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 57ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:19:08 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/explore" for 76.180.142.113 at 2017-09-28 02:19:23 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/explore.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:19:41 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:19:46 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:21:49 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:21:50 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (1.8ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:22:18 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (50.9ms)
+Completed 200 OK in 428ms (Views: 400.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:29:35 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (2.0ms)
+  Rendered layouts/_nav.html.erb (59.2ms)
+Completed 200 OK in 464ms (Views: 384.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:29:38 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 86ms (Views: 83.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:29:40 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:29:44 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:29:46 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 67ms (Views: 55.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:30:20 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:33:48 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (4.5ms)
+Completed 200 OK in 404ms (Views: 359.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:33:50 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 84ms (Views: 81.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:33:52 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:33:55 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:33:56 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 53ms (Views: 52.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:09 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (49.4ms)
+Completed 200 OK in 402ms (Views: 374.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:12 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:24 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (6.9ms)
+Completed 200 OK in 61ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-cb302c7642ff5e04e6ef4e9a397c1a5e635d3d55a40a84d07d5d666ff6948be4.css?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:42 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.4ms)
+  Rendered layouts/_nav.html.erb (51.0ms)
+Completed 200 OK in 457ms (Views: 389.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-cb302c7642ff5e04e6ef4e9a397c1a5e635d3d55a40a84d07d5d666ff6948be4.css?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 76.180.142.113 at 2017-09-28 02:34:43 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:34:44 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:35:19 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (48.5ms)
+Completed 200 OK in 396ms (Views: 368.5ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:35:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:35:24 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:37:38 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (5.3ms)
+Completed 200 OK in 499ms (Views: 379.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:39:46 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (4.5ms)
+Completed 200 OK in 472ms (Views: 425.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:39:48 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:40:00 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.8ms)
+  Rendered layouts/_nav.html.erb (4.9ms)
+Completed 200 OK in 413ms (Views: 365.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:40:02 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 86ms (Views: 83.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:40:06 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:40:09 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:40:11 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (1.9ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:40:24 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.2ms)
+  Rendered layouts/_nav.html.erb (4.8ms)
+Completed 200 OK in 505ms (Views: 384.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:40:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.2ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 115ms (Views: 91.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:40:31 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:40:42 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.3ms)
+  Rendered layouts/_nav.html.erb (47.8ms)
+Completed 200 OK in 381ms (Views: 356.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:43:28 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.4ms)
+  Rendered layouts/_nav.html.erb (54.0ms)
+Completed 200 OK in 430ms (Views: 405.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:43:30 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-09-28 02:43:32 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:43:35 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-09-28 02:43:48 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.5ms)
+  Rendered layouts/_nav.html.erb (18.2ms)
+Completed 200 OK in 441ms (Views: 397.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:06:58 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <% for @p in @posts %>
+    21:         <%= render '/components/post_form' %>
+    22:         <div class="panel panel-default">
+    23:   <div class="panel-body">
+    24:         <p><%= @p.contect %></p>
+  app/views/pages/profile.html.erb:21:in `block in _app_views_pages_profile_html_erb___749030364746222737_38791780'
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___749030364746222737_38791780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.5ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-10-04 02:07:06 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (3.5ms)
+  Rendered layouts/_nav.html.erb (9.6ms)
+Completed 200 OK in 998ms (Views: 997.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:07:11 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <% for @p in @posts %>
+    21:         <%= render '/components/post_form' %>
+    22:         <div class="panel panel-default">
+    23:   <div class="panel-body">
+    24:         <p><%= @p.contect %></p>
+  app/views/pages/profile.html.erb:21:in `block in _app_views_pages_profile_html_erb___749030364746222737_38791780'
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___749030364746222737_38791780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:16 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.2ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:18 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.4ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:22 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:22 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.9ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:26 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:27 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/explore" for 76.180.142.113 at 2017-10-04 02:07:33 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#explore as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/explore.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-04 02:07:41 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:12:32 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (25.6ms)
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <% for @p in @posts %>
+    21:         <%= render '/components/post_form' %>
+    22:         <div class="panel panel-default">
+    23:   <div class="panel-body">
+    24:         <p><%= @p.contect %></p>
+  app/views/pages/profile.html.erb:21:in `block in _app_views_pages_profile_html_erb__4331756092964826280_41210560'
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb__4331756092964826280_41210560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.2ms)
+
+
+Started GET "/user/ndawg" for 76.180.142.113 at 2017-10-04 02:13:34 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"ndawg"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "ndawg"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "ndawg"]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id = 8)  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <% for @p in @posts %>
+    21:         <%= render '/components/post_form' %>
+    22:         <div class="panel panel-default">
+    23:   <div class="panel-body">
+    24:         <p><%= @p.contect %></p>
+  app/views/pages/profile.html.erb:21:in `block in _app_views_pages_profile_html_erb__4331756092964826280_41210560'
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb__4331756092964826280_41210560'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:16:40 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (20.4ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    17: </div>
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <%= render '/components/post_form' %>
+    21:         <% for @p in @posts %>
+    22:        
+    23:         <div class="panel panel-default">
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___2181754525544255132_39524960'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:17:20 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (21.4ms)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    17: </div>
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <%= render '/components/post_form' %>
+    21:         <% for @p in @posts %>
+    22:        
+    23:         <div class="panel panel-default">
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___575249645270629792_34785380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:17:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered pages/profile.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (Missing partial components/_post_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.4/gems/devise-4.3.0/app/views"
+):
+    17: </div>
+    18: 
+    19:     <div class="col-xs-6">
+    20:         <%= render '/components/post_form' %>
+    21:         <% for @p in @posts %>
+    22:        
+    23:         <div class="panel panel-default">
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___575249645270629792_34785380'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:18:20 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (1.7ms)
+  Rendered pages/profile.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 160ms (ActiveRecord: 1.8ms)
+
+SyntaxError (/home/ubuntu/workspace/app/views/components/_post_form.html.erb:16: syntax error, unexpected keyword_end
+'.freeze;@output_buffer.append=( end );@output_buffer.safe_append='
+                                    ^
+/home/ubuntu/workspace/app/views/components/_post_form.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/components/_post_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/components/_post_form.html.erb:16: syntax error, unexpected keyword_end
+  app/views/components/_post_form.html.erb:18: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/components/_post_form.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+  app/views/pages/profile.html.erb:20:in `_app_views_pages_profile_html_erb___4318551240157224572_30241220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-04 02:20:50 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (44.4ms)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (52.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.9ms)
+  Rendered layouts/_nav.html.erb (9.1ms)
+Completed 200 OK in 939ms (Views: 840.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/posts" for 76.180.142.113 at 2017-10-04 02:21:00 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (uninitialized constant PostsController):
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.5) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.4ms)
+
+
+Started GET "/posts" for 76.180.142.113 at 2017-10-09 02:16:10 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'index' could not be found for PostsController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (3.2ms)
+
+
+Started GET "/posts" for 76.180.142.113 at 2017-10-09 02:16:12 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+AbstractController::ActionNotFound (The action 'index' could not be found for PostsController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.4/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-10-09 02:16:15 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (1.7ms)
+  Rendered layouts/_nav.html.erb (39.9ms)
+Completed 200 OK in 782ms (Views: 758.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 76.180.142.113 at 2017-10-09 02:16:21 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#home as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/home.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (3.1ms)
+Completed 200 OK in 59ms (Views: 43.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-09 02:16:28 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (21.6ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (25.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 195ms (Views: 185.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/posts" for 76.180.142.113 at 2017-10-09 02:16:32 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NRvHb+mVSxwH0D7feCfIiA//7fXrl9amJAGqxUzIwXwfCD7cAM7tlPEDazPDT/ZWVd0NiefVy9SdbYycncqS9g==", "post"=>{"contect"=>"Test"}, "commit"=>"Add Post"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["contect", "Test"], ["user_id", 9], ["created_at", "2017-10-09 02:16:32.152777"], ["updated_at", "2017-10-09 02:16:32.152777"]]
+  [1m[35m (12.6ms)[0m  commit transaction
+Redirected to https://chirpy-lawboy22.c9users.io
+Completed 302 Found in 80ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-10-09 02:16:32 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (3.0ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-09 02:17:40 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (0.9ms)
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.8ms)
+Completed 200 OK in 64ms (Views: 48.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts" for 76.180.142.113 at 2017-10-09 02:18:00 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Swu5Q1W/QQeox7MeeklSySC0hLBSGtcibI9ERfyy93phGEDwvOTnj14U5vLBIWwXepZkzF5YylDV42IcLbCk8A==", "post"=>{"contect"=>"One more go"}, "commit"=>"Add Post"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["contect", "One more go"], ["user_id", 9], ["created_at", "2017-10-09 02:18:00.291678"], ["updated_at", "2017-10-09 02:18:00.291678"]]
+  [1m[36m (17.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://chirpy-lawboy22.c9users.io
+Completed 302 Found in 24ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-10-09 02:18:00 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.5ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-09 02:18:03 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (0.8ms)
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC[0m
+  Rendered pages/profile.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.3ms)
+  Rendered layouts/_nav.html.erb (2.7ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for 76.180.142.113 at 2017-10-09 02:18:14 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZplpNXCuG40iW+i7lCZ8pehSypQwy8FB4Kb5HnDsc3lMipCGmfW9BdSIvVcvTkJ7snAq6DyJ3DNZyt9Hoe4g8w==", "post"=>{"contect"=>"Hello Stephanie!"}, "commit"=>"Add Post"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("contect", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["contect", "Hello Stephanie!"], ["user_id", 9], ["created_at", "2017-10-09 02:18:14.073932"], ["updated_at", "2017-10-09 02:18:14.073932"]]
+  [1m[35m (12.9ms)[0m  commit transaction
+Redirected to https://chirpy-lawboy22.c9users.io
+Completed 302 Found in 21ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 76.180.142.113 at 2017-10-09 02:18:14 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#index as HTML
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.5ms)
+  Rendered layouts/_nav.html.erb (3.3ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user/nicks" for 76.180.142.113 at 2017-10-09 02:18:15 +0000
+Cannot render console from 76.180.142.113! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PagesController#profile as HTML
+  Parameters: {"id"=>"nicks"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1  [["username", "nicks"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT 1[0m  [["username", "nicks"]]
+  Rendered components/_post_form.html.erb (1.0ms)
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE (user_id = 9)  ORDER BY "posts"."created_at" DESC
+  Rendered pages/profile.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_nav_users.html.erb (0.4ms)
+  Rendered layouts/_nav.html.erb (2.6ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.8ms)
